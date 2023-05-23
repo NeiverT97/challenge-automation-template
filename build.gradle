@@ -1,0 +1,27 @@
+buildscript {
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.0.81")
+    }
+}
+
+plugins {
+    id 'java'
+}
+apply plugin: 'net.serenity-bdd.aggregator'
+group = 'co.com.certificacion.retotecnicobanistmo'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    implementation group: 'net.serenity-bdd', name: 'serenity-cucumber', version: '1.9.39'
+    implementation group: 'net.serenity-bdd', name: 'serenity-core', version: '2.0.69'
+    implementation group: 'net.serenity-bdd', name: 'serenity-screenplay', version: '2.0.69'
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.0.2'
+    implementation group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+}
